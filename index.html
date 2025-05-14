@@ -33,13 +33,13 @@
         }
 
         .album {
+            width: 100vw;
             align-items: center;
             align-content: center;
             background-color: var(--color-one);
             font-size: 3rem;
             text-align: center;
             text-wrap: pretty;
-            padding: 10px;
             font-family: 'Amatic SC', sans-serif;
             font-weight: 700;
             flex: 1;
@@ -47,6 +47,7 @@
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
             overflow: hidden;
             z-index: 10 !important;
+            min-height: 200px;
         }
 
         #nuestros_viajes {
@@ -61,6 +62,11 @@
 
         #vida_juntos {
             background-image: url("c.jpg");
+            background-size: cover;
+        }
+
+        #nuestra_boda {
+            background-image: url("d.jpg");
             background-size: cover;
         }
 
@@ -97,7 +103,10 @@
             Nuestra vida juntos
             <img src="" alt="">
         </div>
-
+        <div class="album" id="nuestra_boda">
+            Nuestra boda
+            <img src="" alt="">
+        </div>
         <button class="circle-btn fixed">
             <i class="fi fi-br-plus"></i>
         </button>
