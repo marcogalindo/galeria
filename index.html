@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+        @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+        :root {
+            --color-one: #067BC2;
+            --color-two: #DA667B;
+            --color-three: #9EBC9F;
+            --color-four: #FFB140;
+            --color-five: #FFE2FE;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+        }
+
+        .album {
+            align-items: center;
+            align-content: center;
+            background-color: var(--color-one);
+            font-size: 3rem;
+            text-align: center;
+            text-wrap: pretty;
+            padding: 10px;
+            font-family: 'Amatic SC', sans-serif;
+            font-weight: 700;
+            flex: 1;
+            color: white;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+            overflow: hidden;
+            z-index: 10 !important;
+        }
+
+        #nuestros_viajes {
+            background-image: url("a.jpg");
+            background-size: cover;
+        }
+
+        #caminar_juntos {
+            background-image: url("b.jpg");
+            background-size: cover;
+        }
+
+        #vida_juntos {
+            background-image: url("c.jpg");
+            background-size: cover;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        .circle-btn {
+            border-radius: 50%;
+            border: none;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            background-color: var(--color-three);
+            color: white;
+            font-size: 1.5rem;
+            padding-top: 12.5px;
+        }
+    </style>
+</head>
+<body>
+    <!--Galeria de nuestras fotos, vamos a divirla en albumes con un nombre-->
+    <div class="container">
+        <div class="album" id="nuestros_viajes">
+            <div>Nuestros viajes</div>
+        </div>
+        <div class="album" id="caminar_juntos">
+            Caminar juntos
+            <img src="" alt="">
+        </div>
+        <div class="album" id="vida_juntos">
+            Nuestra vida juntos
+            <img src="" alt="">
+        </div>
+
+        <button class="circle-btn fixed">
+            <i class="fi fi-br-plus"></i>
+        </button>
+    </div>
+</body>
+</html>
