@@ -6,7 +6,7 @@
     <title>Galeria</title>
     <style>
         
-        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
 
         :root {
@@ -48,6 +48,7 @@
             overflow: hidden;
             z-index: 10 !important;
             min-height: 200px;
+            user-select: none;
         }
 
         #nuestros_viajes {
@@ -77,15 +78,15 @@
         }
 
         .circle-btn {
-            border-radius: 50%;
-            border: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            border-radius: 10px;
+            border: 1px solid var(--color-two);
             padding: 10px;
-            height: 50px;
-            width: 50px;
-            background-color: var(--color-three);
+            background-color: var(--color-two);
             color: white;
-            font-size: 1.5rem;
-            padding-top: 12.5px;
+            z-index: 10000;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
     </style>
 </head>
@@ -93,22 +94,19 @@
     <!--Galeria de nuestras fotos, vamos a divirla en albumes con un nombre-->
     <div class="container">
         <div class="album" id="nuestros_viajes">
-            <div>Nuestros viajes</div>
+            Nuestros viajes
         </div>
         <div class="album" id="caminar_juntos">
             Caminar juntos
-            <img src="" alt="">
         </div>
         <div class="album" id="vida_juntos">
             Nuestra vida juntos
-            <img src="" alt="">
         </div>
         <div class="album" id="nuestra_boda">
             Nuestra boda
-            <img src="" alt="">
         </div>
         <button class="circle-btn fixed">
-            <i class="fi fi-br-plus"></i>
+            Crea una colección
         </button>
     </div>
 </body>
