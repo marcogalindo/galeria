@@ -26,6 +26,7 @@
         
         .container {
             height: 100vh;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: stretch;
@@ -33,7 +34,7 @@
         }
 
         .album {
-            width: 100vw;
+            width: 100%;
             align-items: center;
             align-content: center;
             background-color: var(--color-one);
@@ -73,11 +74,23 @@
 
         .fixed {
             position: fixed;
+            z-index: 10000;
             bottom: 5px;
             right: 5px;
         }
 
-        .circle-btn {
+        .button-composed {
+            display: flex;
+            flex-direction: row;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            overflow: hidden;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .btn {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             border-radius: 10px;
@@ -85,8 +98,16 @@
             padding: 10px;
             background-color: var(--color-two);
             color: white;
-            z-index: 10000;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .button-composed button {
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .button-composed button i {
+            padding-top: 15px !important;
         }
     </style>
 </head>
@@ -105,9 +126,25 @@
         <div class="album" id="nuestra_boda">
             Nuestra boda
         </div>
-        <button class="circle-btn fixed">
-            Crea una colección
-        </button>
+        <div class="fixed button-composed">
+            <button class="btn">
+                Crea una colección
+            </button>
+            <button class="btn" id="playbackBtn">
+                <i class="fi fi-br-headphones"></i>
+            </button>
+            <audio src="background-music.mp3" id="audioBG"></audio>
+        </div>
     </div>
+
+    <script>
+        const btnPlay = document.getElementById("playbackBtn");
+
+        btnPlay.addEventListener("click", () => {
+            const audio = document.getElementById("audioBG");
+
+            audio.play();
+        })
+    </script>
 </body>
 </html>
